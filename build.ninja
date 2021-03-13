@@ -1,0 +1,13 @@
+cc = clang++
+cflags = -O3
+
+rule cc
+   command = $cc $cflags -o $out $in $lflags
+
+rule clean
+   command = rm -f ./spotfetch
+
+build spotfetch: cc spotfetch.cc
+   cflags = -I./include/ -O3
+
+default spotfetch
