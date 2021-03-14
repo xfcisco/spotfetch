@@ -8,6 +8,6 @@ rule clean
    command = rm -f ./spotfetch
 
 build spotfetch: cc spotfetch.cc
-   cflags = -I./include/ -O3
+   cflags = -Iinclude/
 
 default spotfetch

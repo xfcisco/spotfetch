@@ -1,4 +1,5 @@
 #include <boost/algorithm/string.hpp>
+#include <sstream>
 #include <string>
 #include <iostream>
 #include <vector>
@@ -55,16 +56,16 @@ int main() {
    cout << " ────────────────────────────────" << endl;
 
    for (int i = Art.size()-3; i <= Art.size()-1; ++i) {
-      while (!(Art[i].length()==30)) {
-         if (Art[i].length()>=30) {
-            while (!(Art[i].length()==30)) Art[i].pop_back();
-         } else { 
-            Art[i].append(" ");
-         }
-      }
+      stringstream ss;
+      Art[i].resize(35);
+      ss << "│ " << Art[i];
+      string line = ss.str();
+//      line.replace(34, 1, " │");
+      line[line.length()-1] = '|';
 
-      cout << "│ " << Art[i] << " │" << endl;
+      cout << line << endl;
    }
+
    cout << " ────────────────────────────────" << endl;
 
    artFile.close();
