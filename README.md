@@ -15,4 +15,4 @@ run `ninja` in the directory and execute the binary
 
 │────────────│\
 │  made with ❤️ and passion  │\
-│────────────│\
+│────────────│
