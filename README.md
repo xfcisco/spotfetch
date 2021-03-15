@@ -9,6 +9,6 @@ A C++ fetch tool for spotify
 run `ninja` in the directory and execute the binary
 
 # Dependencies
-  ─ chafa
-  ─ playerctl
-  - boost C++ library (standard)
+ ─ chafa
+ ─ playerctl
+ ─ boost C++ library (standard)
