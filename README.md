@@ -13,6 +13,6 @@ run `ninja` in the directory and execute the binary
  - playerctl
  - boost C++ library (standard)
 
-│────────────────────────────│
-│  made with ❤️ and passion  │
-│────────────────────────────│
+│────────────────────────────│\n
+│  made with ❤️ and passion  │\n
+│────────────────────────────│\n
