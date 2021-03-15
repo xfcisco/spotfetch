@@ -1,4 +1,4 @@
-# spotfetch
+# Spotfetch
 A C++ fetch tool for spotify
 
 # Screenshots

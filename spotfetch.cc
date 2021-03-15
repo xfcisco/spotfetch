@@ -10,10 +10,13 @@ using Json = nlohmann::json;
 string UserName();
 string GetSong(char);
 void trim(string);
+static const char* playerName;
 
-int main() {
+int main(int argc, char *argv[]) {
+   if (argc < 2) return -1;
+   playerName = argv[1];
    Json json;
-   system("playerctl -p spotify metadata mpris:trackid > spotfetch.tmp");
+   system((string("playerctl -p ")+playerName+" metadata mpris:trackid > spotfetch.tmp").c_str());
    fstream f("spotfetch.tmp");
    system("rm spotfetch.tmp");
    string track;
@@ -79,9 +82,9 @@ string GetSong(char req) {
    fstream f("spotfetch.tmp");
 
    switch (req) {
-      case 'r': system("playerctl -p spotify metadata xesam:artist > spotfetch.tmp"); break;
-      case 's': system("playerctl -p spotify metadata xesam:title > spotfetch.tmp"); break;
-      case 'a': system("playerctl -p spotify metadata xesam:album > spotfetch.tmp"); break;
+      case 'r': system((string("playerctl -p ")+playerName+" metadata xesam:artist > spotfetch.tmp").c_str()); break;
+      case 's': system((string("playerctl -p ")+playerName+" metadata xesam:title > spotfetch.tmp").c_str()); break;
+      case 'a': system((string("playerctl -p ")+playerName+" metadata xesam:album > spotfetch.tmp").c_str()); break;
    };
 
    f.read(data, sizeof(string));
