@@ -1,5 +1,5 @@
 # Spotfetch
-A C++ fetch tool for spotify
+A C++ fetch tool for spotify, its a cool little tool to retrieve information on current playing song on spotify. Run the command and be treated to a pixelated version of the album art accompanied by its information.
 
 # Screenshots
 ![alt text](https://github.com/xfcisco/spotfetch/blob/main/shots/pic1.png)
